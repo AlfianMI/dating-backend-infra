@@ -11,6 +11,10 @@ resource "aws_instance" "this" {
   key_name                    = var.key_name
   associate_public_ip_address = true
 
+  metadata_options {
+    http_tokens = "required"
+  }
+
   user_data = <<-EOF
     #!/bin/bash
     set -e

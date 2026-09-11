@@ -39,12 +39,6 @@ variable "ssh_allowed_cidr" {
   type        = string
 }
 
-variable "app_port" {
-  description = "Application port exposed by the EC2 security group"
-  type        = number
-  default     = 8080
-}
-
 variable "instance_profile_name" {
   description = "Existing EC2 instance profile to reuse"
   type        = string

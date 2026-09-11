@@ -12,8 +12,3 @@ variable "ssh_allowed_cidr" {
   description = "CIDR allowed to access SSH"
   type        = string
 }
-
-variable "app_port" {
-  description = "Application port exposed by the EC2 instance"
-  type        = number
-}
