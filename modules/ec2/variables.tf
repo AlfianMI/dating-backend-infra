@@ -3,11 +3,6 @@ variable "project_name" {
   type        = string
 }
 
-variable "ami_ssm_parameter" {
-  description = "SSM public parameter containing the Amazon Linux 2023 AMI ID"
-  type        = string
-}
-
 variable "instance_type" {
   description = "EC2 instance type"
   type        = string
@@ -30,5 +25,10 @@ variable "instance_profile_name" {
 
 variable "key_name" {
   description = "Existing EC2 key pair name"
+  type        = string
+}
+
+variable "ami_id" {
+  description = "AMI ID used by the EC2 instance"
   type        = string
 }

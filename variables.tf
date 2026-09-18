@@ -28,12 +28,6 @@ variable "instance_type" {
   type        = string
 }
 
-variable "ami_ssm_parameter" {
-  description = "SSM public parameter for the Amazon Linux 2023 AMI"
-  type        = string
-  default     = "/aws/service/ami-amazon-linux-latest/al2023-ami-kernel-default-x86_64"
-}
-
 variable "ssh_allowed_cidr" {
   description = "CIDR allowed to access SSH"
   type        = string
@@ -52,4 +46,10 @@ variable "key_name" {
 variable "aws_account_id" {
   description = "AWS account ID"
   type        = string
+}
+
+variable "ami_id" {
+  description = "AMI ID for the EC2 instance"
+  type        = string
+  sensitive   = true
 }

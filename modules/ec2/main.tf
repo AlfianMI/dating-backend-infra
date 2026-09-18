@@ -1,9 +1,5 @@
-data "aws_ssm_parameter" "al2023_ami" {
-  name = var.ami_ssm_parameter
-}
-
 resource "aws_instance" "this" {
-  ami                         = data.aws_ssm_parameter.al2023_ami.value
+  ami                         = var.ami_id
   instance_type               = var.instance_type
   subnet_id                   = var.subnet_id
   vpc_security_group_ids      = [var.security_group_id]
